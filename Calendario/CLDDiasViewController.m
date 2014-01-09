@@ -65,8 +65,8 @@
         UIButton *dia = [UIButton buttonWithType:UIButtonTypeRoundedRect]; // instend of "Click Me" you can write your own message/Label
         [dia setTitle:[NSString stringWithFormat:@"%i",i]  forState:UIControlStateNormal]; // create the Rectangle Frame with specified size
         dia.frame = CGRectMake(x, y, 30, 30); // x,y,width,height
-        if (i < 4)
-            dia.enabled = NO;
+        //if (i < 4)
+        //    dia.enabled = NO;
         [self.view addSubview:dia];// add button to your view.
         
         if (i%7 == 0)
