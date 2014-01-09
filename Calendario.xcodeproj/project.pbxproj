@@ -21,6 +21,8 @@
 		12D879DC187DACE500B6B8C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D879BE187DACE500B6B8C2 /* UIKit.framework */; };
 		12D879E4187DACE500B6B8C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12D879E2187DACE500B6B8C2 /* InfoPlist.strings */; };
 		12D879E6187DACE500B6B8C2 /* CalendarioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D879E5187DACE500B6B8C2 /* CalendarioTests.m */; };
+		12D879F1187DB18A00B6B8C2 /* CLDInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D879F0187DB18A00B6B8C2 /* CLDInfoViewController.m */; };
+		12D879F4187DB26000B6B8C2 /* CLDDiasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D879F3187DB26000B6B8C2 /* CLDDiasViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		12D879E1187DACE500B6B8C2 /* CalendarioTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CalendarioTests-Info.plist"; sourceTree = "<group>"; };
 		12D879E3187DACE500B6B8C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		12D879E5187DACE500B6B8C2 /* CalendarioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarioTests.m; sourceTree = "<group>"; };
+		12D879EF187DB18A00B6B8C2 /* CLDInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLDInfoViewController.h; sourceTree = "<group>"; };
+		12D879F0187DB18A00B6B8C2 /* CLDInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLDInfoViewController.m; sourceTree = "<group>"; };
+		12D879F2187DB26000B6B8C2 /* CLDDiasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLDDiasViewController.h; sourceTree = "<group>"; };
+		12D879F3187DB26000B6B8C2 /* CLDDiasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLDDiasViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,10 @@
 				12D879C9187DACE500B6B8C2 /* CLDAppDelegate.h */,
 				12D879CA187DACE500B6B8C2 /* CLDAppDelegate.m */,
 				12D879CC187DACE500B6B8C2 /* Main.storyboard */,
+				12D879F2187DB26000B6B8C2 /* CLDDiasViewController.h */,
+				12D879F3187DB26000B6B8C2 /* CLDDiasViewController.m */,
+				12D879EF187DB18A00B6B8C2 /* CLDInfoViewController.h */,
+				12D879F0187DB18A00B6B8C2 /* CLDInfoViewController.m */,
 				12D879CF187DACE500B6B8C2 /* CLDViewController.h */,
 				12D879D0187DACE500B6B8C2 /* CLDViewController.m */,
 				12D879D2187DACE500B6B8C2 /* Images.xcassets */,
@@ -250,9 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12D879F1187DB18A00B6B8C2 /* CLDInfoViewController.m in Sources */,
 				12D879D1187DACE500B6B8C2 /* CLDViewController.m in Sources */,
 				12D879CB187DACE500B6B8C2 /* CLDAppDelegate.m in Sources */,
 				12D879C7187DACE500B6B8C2 /* main.m in Sources */,
+				12D879F4187DB26000B6B8C2 /* CLDDiasViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
