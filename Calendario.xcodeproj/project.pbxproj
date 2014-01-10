@@ -23,6 +23,7 @@
 		12D879E6187DACE500B6B8C2 /* CalendarioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D879E5187DACE500B6B8C2 /* CalendarioTests.m */; };
 		12D879F1187DB18A00B6B8C2 /* CLDInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D879F0187DB18A00B6B8C2 /* CLDInfoViewController.m */; };
 		12D879F4187DB26000B6B8C2 /* CLDDiasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D879F3187DB26000B6B8C2 /* CLDDiasViewController.m */; };
+		A79849C6187F48F30012EE61 /* CLDDescricaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A79849C5187F48F30012EE61 /* CLDDescricaoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		12D879F0187DB18A00B6B8C2 /* CLDInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLDInfoViewController.m; sourceTree = "<group>"; };
 		12D879F2187DB26000B6B8C2 /* CLDDiasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLDDiasViewController.h; sourceTree = "<group>"; };
 		12D879F3187DB26000B6B8C2 /* CLDDiasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLDDiasViewController.m; sourceTree = "<group>"; };
+		A79849C4187F48F30012EE61 /* CLDDescricaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLDDescricaoViewController.h; sourceTree = "<group>"; };
+		A79849C5187F48F30012EE61 /* CLDDescricaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLDDescricaoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 				12D879F0187DB18A00B6B8C2 /* CLDInfoViewController.m */,
 				12D879CF187DACE500B6B8C2 /* CLDViewController.h */,
 				12D879D0187DACE500B6B8C2 /* CLDViewController.m */,
+				A79849C4187F48F30012EE61 /* CLDDescricaoViewController.h */,
+				A79849C5187F48F30012EE61 /* CLDDescricaoViewController.m */,
 				12D879D2187DACE500B6B8C2 /* Images.xcassets */,
 				12D879C1187DACE500B6B8C2 /* Supporting Files */,
 			);
@@ -264,6 +269,7 @@
 				12D879D1187DACE500B6B8C2 /* CLDViewController.m in Sources */,
 				12D879CB187DACE500B6B8C2 /* CLDAppDelegate.m in Sources */,
 				12D879C7187DACE500B6B8C2 /* main.m in Sources */,
+				A79849C6187F48F30012EE61 /* CLDDescricaoViewController.m in Sources */,
 				12D879F4187DB26000B6B8C2 /* CLDDiasViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +479,7 @@
 				12D879EB187DACE500B6B8C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		12D879EC187DACE500B6B8C2 /* Build configuration list for PBXNativeTarget "CalendarioTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +488,7 @@
 				12D879EE187DACE500B6B8C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

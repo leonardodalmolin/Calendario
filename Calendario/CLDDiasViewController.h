@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CLDDiasViewController : UIViewController
+@interface CLDDiasViewController : UIViewController<UITextFieldDelegate>
 
 @end
