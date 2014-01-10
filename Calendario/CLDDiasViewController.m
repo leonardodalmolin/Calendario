@@ -41,6 +41,8 @@
 
 - (IBAction)actDia:(id)sender{
     [self performSegueWithIdentifier:@"gotoDescricao" sender:sender];
+    _descr = @"you clicked on button %i", [sender tag];
+    
 }
 
 
@@ -54,8 +56,9 @@
 {
     if([[segue identifier] isEqualToString:@"gotoDescricao"])
     {
+        //_descr = @"you clicked on button %i", [sender tag];
         CLDDescricaoViewController *desc = (CLDDescricaoViewController *)segue.destinationViewController;
-        desc.txtDesc = @"f";
+        desc.txtDesc = _descr;
         
     }
     
@@ -167,7 +170,6 @@
             [dia setTitle:[NSString stringWithFormat:@" "]  forState:UIControlStateNormal];
             dia.frame = CGRectMake(x, y, 30, 30); // x,y,width,height
             [dia setHidden:YES];
-            [self.view addSubview:dia];// add button to your view.
         }
         else{
             [dia setTitle:[NSString stringWithFormat:@"%i",i]  forState:UIControlStateNormal];
@@ -180,8 +182,9 @@
             }
             [dia addTarget:self action:@selector(actDia:) forControlEvents:UIControlEventTouchUpInside];
         
-            [self.view addSubview:dia];// add button to your view.
         }
+        [self.view addSubview:dia];// add button to your view.
+
         if (da%7 == 0)
             y = y+40;
         if (x >= 240)

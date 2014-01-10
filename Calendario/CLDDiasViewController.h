@@ -10,4 +10,6 @@
 
 @interface CLDDiasViewController : UIViewController<UITextFieldDelegate>
 
+@property (strong, nonatomic) NSString *descr;
+
 @end
