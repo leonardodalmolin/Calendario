@@ -40,9 +40,8 @@
 }
 
 - (IBAction)actDia:(id)sender{
-    [self performSegueWithIdentifier:@"gotoDescricao" sender:sender];
-    _descr = @"you clicked on button %i", [sender tag];
-    
+    _dia = [sender tag];
+    [self performSegueWithIdentifier:@"gotoDescricao" sender:sender];    
 }
 
 
@@ -56,9 +55,9 @@
 {
     if([[segue identifier] isEqualToString:@"gotoDescricao"])
     {
-        //_descr = @"you clicked on button %i", [sender tag];
         CLDDescricaoViewController *desc = (CLDDescricaoViewController *)segue.destinationViewController;
-        desc.txtDesc = _descr;
+        desc.m = _mes;
+        desc.d = _dia;
         
     }
     
@@ -84,18 +83,16 @@
     NSInteger x = 35;
     NSInteger y = 150;
     
-    NSInteger op;
-    
     NSInteger d,inicio, da;
     NSArray *feriados;
     
     for (NSString* akey in [meses allKeys]) {
         NSString* aValue = [meses valueForKey:akey];
         if ([self.title isEqualToString:akey])
-            op = [aValue integerValue];
+            _mes = [aValue integerValue];
     }
     
-    switch (op) {
+    switch (_mes) {
         case 1:
             d = 31;
             inicio = 3;

@@ -11,5 +11,6 @@
 @interface CLDDescricaoViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *lbDesc;
-@property (strong, nonatomic) NSString *txtDesc;
+@property (nonatomic) NSInteger m;
+@property (nonatomic) NSInteger d;
 @end

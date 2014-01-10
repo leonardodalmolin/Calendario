@@ -10,6 +10,7 @@
 
 @interface CLDDiasViewController : UIViewController<UITextFieldDelegate>
 
-@property (strong, nonatomic) NSString *descr;
+@property (nonatomic) NSInteger mes;
+@property (nonatomic) NSInteger dia;
 
 @end
