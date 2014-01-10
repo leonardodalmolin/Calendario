@@ -95,74 +95,94 @@
     switch (op) {
         case 1:
             d = 31;
+            inicio = 3;
             feriados = [NSArray arrayWithObject:@"1"];
             break;
         case 2:
             d = 28;
+            inicio = 6;
             feriados = [NSArray arrayWithObject:@"2"];
             break;
         case 3:
             d = 31;
+            inicio = 6;
             feriados = [NSArray arrayWithObject:@"4"];
             break;
         case 4:
             d = 30;
+            inicio = 2;
             feriados = [NSArray arrayWithObjects:@"17",@"18",@"19",@"20",@"21", nil];
             break;
         case 5:
             d = 31;
+            inicio = 4;
             feriados = [NSArray arrayWithObject:@"1"];
             break;
         case 6:
             d = 30;
+            inicio = 0;
             feriados = [NSArray arrayWithObjects:@"12", @"17",@"18",@"19",@"23",@"25", @"30", nil];
             break;
         case 7:
             d = 31;
+            inicio = 2;
             feriados = [NSArray arrayWithObject:@"0"];
             break;
         case 8:
             d = 31;
+            inicio = 5;
             feriados = [NSArray arrayWithObject:@"0"];
             break;
         case 9:
             d = 30;
+            inicio = 1;
             feriados = [NSArray arrayWithObjects:@"7",@"20",nil];
             break;
         case 10:
             d = 31;
+            inicio = 3;
             feriados = [NSArray arrayWithObjects:@"12",@"15",nil];
             break;
         case 11:
             d = 30;
+            inicio = 6;
             feriados = [NSArray arrayWithObjects:@"2",@"15",nil];
             break;
         case 12:
             d = 31;
+            inicio = 1;
             feriados = [NSArray arrayWithObject:@"25"];
             break;
         default:
             d = 0;
+            inicio = 0;
             feriados = [NSArray arrayWithObject:@"0"];
             break;
     }
-    
-    for (int i=1; i <= d; i++) {
-        
+    da = 0;
+    for (int i=1-inicio; i <= d; i++) {
+        da++;
         UIButton *dia = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [dia setTitle:[NSString stringWithFormat:@"%i",i]  forState:UIControlStateNormal];
-        dia.frame = CGRectMake(x, y, 30, 30); // x,y,width,height
-        [dia setTag:i];
-        for (int j = 0; j < feriados.count; j++) {
-            if ([feriados[j] integerValue] == i ) {
-                [dia setBackgroundColor:[UIColor colorWithRed:34.0/255.0 green:34.0/255.0 blue:34.0/255.0 alpha:1.0]];
-            }
+        if (i < 1) {
+            [dia setTitle:[NSString stringWithFormat:@" "]  forState:UIControlStateNormal];
+            dia.frame = CGRectMake(x, y, 30, 30); // x,y,width,height
+            [dia setHidden:YES];
+            [self.view addSubview:dia];// add button to your view.
         }
-        [dia addTarget:self action:@selector(actDia:) forControlEvents:UIControlEventTouchUpInside];
+        else{
+            [dia setTitle:[NSString stringWithFormat:@"%i",i]  forState:UIControlStateNormal];
+            dia.frame = CGRectMake(x, y, 30, 30); // x,y,width,height
+            [dia setTag:i];
+            for (int j = 0; j < feriados.count; j++) {
+                if ([feriados[j] integerValue] == i ) {
+                    [dia setBackgroundColor:[UIColor colorWithRed:34.0/255.0 green:34.0/255.0 blue:34.0/255.0 alpha:1.0]];
+                }
+            }
+            [dia addTarget:self action:@selector(actDia:) forControlEvents:UIControlEventTouchUpInside];
         
-        [self.view addSubview:dia];// add button to your view.
-        
-        if (i%7 == 0)
+            [self.view addSubview:dia];// add button to your view.
+        }
+        if (da%7 == 0)
             y = y+40;
         if (x >= 240)
             x = 35;
